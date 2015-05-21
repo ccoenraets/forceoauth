@@ -2,6 +2,22 @@
 ### AngularJS Service for Salesforce OAuth Authentication
 
 
+## Usage
+
+Example:
+
+```
+angular.module('sampleApp', ["force-oauth"])
+
+    .controller('MyController', function (oauth) {
+
+        oauth.login().then(function(oauthData) {
+            console.log(oauthData);
+        });
+
+    });
+```
+
 ## Quick Start
 
 To run the sample provided in this repository:
