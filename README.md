@@ -1,6 +1,17 @@
 # ForceOAuth
 ### AngularJS Service for Salesforce OAuth Authentication
 
+## Browser and Cordova without Code Changes
+
+If you develop a hybrid application using the Mobile SDK, you often switch back and forth between running the app in the browser and on device: Developing in the browser is generally faster and easier to debug, but you still need to test device-specific features and check that everything runs as expected on the target platforms. The problem is that the configuration of OAuth and REST is different when running in the browser and on device. Here is a summary of the key differences:
+
+<table>
+<tr><td></td><td><strong>Browser</strong></td><td><strong>Mobile SDK</strong></td></tr>
+<tr><td>Requires Proxy</td><td>Yes</td><td>No</td></tr>
+<tr><td>OAuth</td><td>Window Popup</td><td>OAuth Plugin</td></tr>
+</table>
+
+ForceOAuth abstracts the OAuth differences and allows you to run your app in the browser and on device without code or configuration changes.
 
 ## Usage
 
