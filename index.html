@@ -1,0 +1,27 @@
+<html>
+<body ng-app="sampleApp">
+
+<h1>OAuth Values</h1>
+
+<table ng-controller="OAuthController">
+    <tr ng-repeat="(key, value) in oauthData">
+        <td>{{key}}</td><td>{{ value }}</td>
+    </tr>
+</table>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="forceoauth.js"></script>
+
+<script>
+    angular.module('sampleApp', ["force-oauth"])
+
+            .controller('OAuthController', function ($scope, oauth) {
+                oauth.login().then(function (oauthData) {
+                    console.log(oauthData);
+                    $scope.oauthData = oauthData;
+                });
+            });
+</script>
+
+</body>
+</html>

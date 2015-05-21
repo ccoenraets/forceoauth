@@ -8,7 +8,7 @@ To run the sample provided in this repository:
 
 1. Install force-server
 
-    Because of the browser's cross-origin restrictions, your JavaScript application hosted on your own server (or localhost) will not be able to make API calls directly to the *.salesforce.com domain. The solution is to proxy your API calls through your own server. You can use your own proxy server, but ForceNG is tightly integrated with [ForceServer](https://github.com/ccoenraets/force-server), a simple development server for Force.com. To install ForceServer, make sure Node.js is installed on your system, open a command prompt and execute the following command:
+    Because of the browser's cross-origin restrictions, your JavaScript application hosted on your own server (or localhost) will not be able to make API calls directly to the *.salesforce.com domain. The solution is to proxy your API calls through your own server. You can use your own proxy server, but ForceOAuth is tightly integrated with [ForceServer](https://github.com/ccoenraets/force-server), a simple development server for Force.com. To install ForceServer, make sure Node.js is installed on your system, open a command prompt and execute the following command:
 
     ```
     npm install -g force-server
@@ -20,7 +20,7 @@ To run the sample provided in this repository:
     sudo npm install -g force-server
     ```
 
-1. Clone this repository or download and unzip [this]() zip file
+1. Clone this repository or download and unzip [this](https://github.com/ccoenraets/forceoauth/archive/master.zip) zip file
 
 1. ```cd``` to the ```forceoauth``` directory
 
@@ -31,3 +31,5 @@ To run the sample provided in this repository:
     ```
 
     This starts the ForceServer server on port 8200 and loads your sample app in your default browser. After authenticating against your developer org, you should see a list of OAuth values. 
+
+> Starting in the Spring 15 release, some Salesforce REST APIs (like Chatter and sobjects) support CORS. To allow an app to make direct REST calls against your org, register the app domain in Setup: Administer > Security Controls > CORS.
